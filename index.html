@@ -11,8 +11,15 @@
 
 <body>
   <div id="app"></div>
+  <script type="module">
+    const key = import.meta.env.VITE_API_KEY;
+    const teste = "url/{{import.meta\u200b.env.VITE_API_KEY}}";
+    console.log(teste);
+    console.log(key);
+  </script>
   <script
-    src="https://maps.googleapis.com/maps/api/js?libraries=places&key="></script>
+    src="https://maps.googleapis.com/maps/api/js?libraries=places&key=">
+  </script>
   </script>
   <script type="module" src="/src/main.js"></script>
 </body>

@@ -24,14 +24,15 @@
         </div>
       </div>
     </div>
-    <div class="q-pa-md" v-if="clienteList.length > 0">
+    <div class="list_tm">
+<div class="q-pa-md" v-if="clienteList.length > 0">
       <table>
         <tr>
           <th style="width: 40%">Nome do Cliente</th>
           <th style="width: 50%">Endereço</th>
           <th style="width: 10%">Remover</th>
         </tr>
-        <tr v-for="cliente in clienteList" :key="cliente.id">
+        <tr v-for="(cliente,index) in clienteList" :key="index">
           <td>{{ cliente.nome }}</td>
           <td>{{ cliente.endereco.name }}</td>
           <td>
@@ -45,6 +46,8 @@
           </td>
         </tr>
       </table>
+    </div>
+    </div>
       <div class="q-pa-md">
         <q-btn
           :loading="loading"
@@ -55,7 +58,6 @@
           label="Calcular Rota"
         />
       </div>
-    </div>
   </div>
 </template>
 
@@ -92,6 +94,7 @@ export default {
     },
     remover(id) {
       this.clienteList.splice(id, 1);
+      console.log(id);
       this.messageView("Cliente removido da lista!");
     },
     searchClient() {
@@ -131,6 +134,12 @@ export default {
 </script>
 
 <style scoped>
+
+.list_tm{
+  max-height: 45vw;
+  overflow-y: scroll;
+}
+
 .center-component {
   max-width: 400px;
   margin: 0 auto;
