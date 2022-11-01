@@ -1,8 +1,8 @@
 <template>
   <section class="route-list-view">
     <div class="route-list-view-header">
-      <div class="list_title">
-        <h2 class="ui header">Lista de Rotas</h2>
+      <div>
+        <h2 class="ui header list_title">Lista de Rotas</h2>
       </div>
     </div>
     <div
@@ -61,12 +61,12 @@ export default {
 <style lang="scss" scoped>
 .route-list-view { 
   font-size: 18px;
-  border-radius: 8px;
-  height: 720px; 
+  border-radius: 15px;
   position: absolute;
   z-index: 2;
+  max-height: 60vw;
   max-width: 350px;
-  margin: 40px;
+  margin: 30px;
   overflow-y: scroll;
   background-color: white;
 }
@@ -95,30 +95,30 @@ export default {
 }
 
 .list_title {
-  color: gold;
+  color: black;
   text-align: center;
 }
 .rodape_list {
   width: 96%;
-  border: 4px solid gray;
+  margin: 7px;
+  border: 4px solid #9E9E9E;
   border-radius: 5px;
   font-size: 20px;
   text-align: center;
-  margin: 7px;
   color: black;
-  background-color: gray;
+  background-color: #9E9E9E;
   display: inline-block;
 }
 
 .list_distance_duration{
   width: 20%;
-  border: 2px solid grey;
-  border-radius: 5px;
-  font-size: 18px;
+  border: 2px solid #F5F5F5;
+  border-radius: 6px;
+  font-size: 14px;
   text-align: center;
   margin: 4px;
   color: black;
-  background-color: gray;
+  background-color: #F5F5F5;
   display: inline-block;
 }
 </style>>
