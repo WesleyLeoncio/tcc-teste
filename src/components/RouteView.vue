@@ -1,69 +1,46 @@
 <template>
-  <div class="q-pa-md">
+  <div class="mt-3 px-1">
     <div class="center-component">
       <Message :msg="msg" :dialog="dialog" :valor="valor" />
       <div class="route-client-box">
-        <q-input
-          color="black"
-          outlined
-          v-model="phone"
-          label="Celular do Cliente"
-          mask="(##) ##### - ####"
-        >
-          <template v-slot:append>
-            <q-icon name="phone" color="black" />
-          </template>
-        </q-input>
+       <input type="text" v-model="phone">
         <div class="btn-route-client">
-          <q-btn
-            color="secondary"
-            label="Pesquisar"
-            size="lg"
-            @click="searchClient()"
-          />
+          
+         <button @click="searchClient()" type="button" class="btn btn-primary">Primary</button>
         </div>
       </div>
     </div>
     <div class="list_tm">
-<div class="q-pa-md" v-if="clienteList.length > 0">
-      <table>
-        <tr>
-          <th style="width: 40%">Nome do Cliente</th>
-          <th style="width: 50%">Endereço</th>
-          <th style="width: 10%">Remover</th>
-        </tr>
-        <tr v-for="(cliente,index) in clienteList" :key="index">
-          <td>{{ cliente.nome }}</td>
-          <td>{{ cliente.endereco.name }}</td>
-          <td>
-            <q-btn
-              @click="remover(index)"
-              round
-              color="red"
-              glossy
-              icon="delete"
-            />
-          </td>
-        </tr>
-      </table>
-    </div>
-    </div>
-      <div class="q-pa-md">
-        <q-btn
-          :loading="loading"
-          v-if="clienteList.length > 1"
-          @click="calcRoute()"
-          color="secondary"
-          class="full-width"
-          label="Calcular Rota"
-        />
+      <div class="q-pa-md" v-if="clienteList.length > 0">
+        <table>
+          <tr>
+            <th style="width: 40%">Nome do Cliente</th>
+            <th style="width: 50%">Endereço</th>
+            <th style="width: 10%">Remover</th>
+          </tr>
+          <tr v-for="(cliente, index) in clienteList" :key="index">
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.endereco.name }}</td>
+            <td>
+              <q-btn
+                @click="remover(index)"
+                round
+                color="red"
+                glossy
+                icon="delete"
+              />
+            </td>
+          </tr>
+        </table>
       </div>
+    </div>
+    <div class="q-pa-md"></div>
   </div>
 </template>
 
 <script>
+import Message from "../components/Message.vue";
 import axios from "axios";
-import Message from "./Message.vue";
 import { mapGetters, mapActions } from "vuex";
 export default {
   name: "RouteView",
@@ -134,8 +111,7 @@ export default {
 </script>
 
 <style scoped>
-
-.list_tm{
+.list_tm {
   max-height: 45vw;
   overflow-y: scroll;
 }

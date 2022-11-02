@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 #nav {
-  background-color: $templateColor;
+  background-color: #222;
   border-bottom: 4px solid #111;
   padding: 15px 50px;
   display: flex;
@@ -38,7 +38,7 @@ export default {
 }
 
 #nav a {
-  color: $templateColorFont;
+  color: #fcba03;
   text-decoration: none;
   margin: 12px;
   transition: 0.5s;

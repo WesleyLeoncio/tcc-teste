@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md">
+  <div class="mt-3 px-1">
     <div class="center-component">
       <div class="ui left icon input route-client-box ">
         <i class="marker alternate icon"></i>
