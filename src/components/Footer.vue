@@ -10,12 +10,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #footer {
   height: 100px;
-  background-color: #222;
+  background-color: $templateColor;
   border-top: 4px solid #111;
-  color: #fcba03;
+  color: $templateColorFont;
   display: flex;
   align-items: center;
   justify-content: center;

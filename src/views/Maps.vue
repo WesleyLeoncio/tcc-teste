@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-container">
     <RouteList />
     <DirectionsMapView />
   </div>
@@ -18,11 +18,12 @@ export default {
     };
   },
   computed: mapGetters(["getRoute"]),
-  created() {
-    this.rota = this.getRoute;
+  created() { 
+    this.rota = this.getRoute; 
   },
 };
 </script>
 
 <style scoped>
+
 </style>
