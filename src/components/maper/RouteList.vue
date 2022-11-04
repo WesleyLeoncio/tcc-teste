@@ -46,7 +46,8 @@ export default {
   methods: {
     convertDistance(distance) {
       if (distance >= 1000) {
-        return `Distancia: ${distance} km`;
+        const distanceFormt = distance/1000;
+        return `Distancia: ${distanceFormt} km`;
       }
       return `Distancia: ${distance} m`;
     },
